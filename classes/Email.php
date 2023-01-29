@@ -25,11 +25,11 @@ class Email
         //Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp-relay.sendinblue.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '3c0bb897eac412';
-        $mail->Password = 'a4e4b4371e9d3d';
+        $mail->Port = 587;
+        $mail->Username = 'maubr_95@hotmail.com';
+        $mail->Password = 'hPkw2VsWxHbTrpF6';
 
         $mail->setFrom('cuentas@appsalon.com');
         $mail->addAddress('cuentas@appsalon.com',  'AppSalon.com');
@@ -42,7 +42,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Haz creado tu cuenta en App Salon, solo debes confirmarla presionando el siguiente enlace</p>";
-        $contenido .= "<p>Presiona aqui: <a href='http://localhost:3000/confirmar-cuenta?token=" . $this->token  . "'>Confirmar cuenta</a></p>";
+        $contenido .= "<p>Presiona aqui: <a href='https://agentorange.alwaysdata.net/confirmar-cuenta?token=" . $this->token  . "'>Confirmar cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</hmtl>";
 
@@ -58,11 +58,11 @@ class Email
         //Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp-relay.sendinblue.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '3c0bb897eac412';
-        $mail->Password = 'a4e4b4371e9d3d';
+        $mail->Port = 587;
+        $mail->Username = 'maubr_95@hotmail.com';
+        $mail->Password = 'hPkw2VsWxHbTrpF6';
 
         $mail->setFrom('cuentas@appsalon.com');
         $mail->addAddress('cuentas@appsalon.com',  'AppSalon.com');
@@ -75,7 +75,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Haz solicitado reestablecer tu password, sigue el siguiente enlace para hacerlo</p>";
-        $contenido .= "<p>Presiona aqui: <a href='http://localhost:3000/recuperar?token=" . $this->token  . "'>Restablecer Password </a></p>";
+        $contenido .= "<p>Presiona aqui: <a href='http://agentorange.alwaysdata.net/recuperar?token=" . $this->token  . "'>Restablecer Password </a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</hmtl>";
 
